@@ -3,7 +3,9 @@ from tensorflow.keras import Model
 from tensorflow.keras.layers import Dense, BatchNormalization, Conv2D, Dropout, Reshape, Conv1D, Activation
 from tensorflow.keras.layers import Flatten, InputLayer, GlobalAveragePooling2D, Multiply
 
-
+# This code is used to construct a CNN_ECA model, which is based on the CNN model and the ECA module.
+# The CNN model is used to extract spatial features, and the ECA module is used to enhance the feature expression ability of CNN.
+# The input of CNN_ECA model is the data of 8 variables in 46*71 grid, and the output is the data of 464 stations.
 class CNN_ECA(Model):
 
     def __init__(self, k=3, channel=8, latn=46, lonn=71, object_staionn=464, use_eca_block=True):
