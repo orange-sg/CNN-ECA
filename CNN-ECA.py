@@ -4,10 +4,10 @@ from tensorflow.keras.layers import Dense, BatchNormalization, Conv2D, Dropout, 
 from tensorflow.keras.layers import Flatten, InputLayer, GlobalAveragePooling2D, Multiply
 
 
-class ECA_Net(Model):
+class CNN_ECA(Model):
 
     def __init__(self, k=3, channel=8, latn=46, lonn=71, object_staionn=464, use_eca_block=True):
-        super(ECA_Net, self).__init__()
+        super(CNN_ECA, self).__init__()
         self.inp = InputLayer(input_shape=(channel, latn, lonn))
         self.c1 = Conv2D(filters=64, kernel_size=k, activation='relu', padding='same')
         self.b1 = BatchNormalization()
@@ -51,4 +51,4 @@ class ECA_Net(Model):
         out = self.f1(out)
         return out
 
-model = ECA_Net()
+model = CNN_ECA()
