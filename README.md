@@ -1,4 +1,4 @@
-# CNN-ECA: Long-Term Downscaling Model for Wind Speed
+# CNN-ECA: Long-term Downscaling Model for Wind Speed
 
 Welcome to the GitHub repository for CNN-ECA, a long-term downscaling model for wind speed.
 
